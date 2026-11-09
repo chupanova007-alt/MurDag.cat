@@ -44,14 +44,21 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   color: #C97B63;
+  letter-spacing: 1px;
 }
 
 .logo-emoji {
-  font-size: 34px;
+  font-size: 36px;
   line-height: 1;
+  animation: wag 2.5s ease-in-out infinite;
+}
+
+@keyframes wag {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
 }
 
 nav a {
@@ -67,8 +74,14 @@ nav a:hover {
 /* ===== Главный экран (hero) ===== */
 .hero {
   text-align: center;
-  padding: 100px 20px 80px;
+  padding: 90px 20px 80px;
   background: linear-gradient(135deg, #FFF5EE 0%, #FFE4D6 100%);
+}
+
+.hero-emoji {
+  font-size: 60px;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -147,7 +160,6 @@ section > p {
   box-shadow: 0 12px 28px rgba(201, 123, 99, 0.22);
 }
 
-/* Эмодзи вместо фото */
 .card-emoji {
   font-size: 90px;
   line-height: 1;
@@ -270,6 +282,9 @@ footer {
   }
   .hero h1 {
     font-size: 32px;
+  }
+  .hero-emoji {
+    font-size: 46px;
   }
   section {
     padding: 50px 20px;
